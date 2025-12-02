@@ -1,0 +1,11 @@
+node_modules
+.env
+.vercel
+dist
+public
+generated
+prisma/migrations
+
+.DS_Store
+/prisma/data/data.ts
+/ecosystem.config.js
