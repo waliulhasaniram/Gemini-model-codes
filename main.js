@@ -12,12 +12,18 @@ const rl = readLine.createInterface({
 });
 
 async function mainAI() {
-  const prompt = await rl.question("Enter your prompt: ");
-
-  const response = await genAI.models.generateContent({ model: "gemini-2.5-flash" ,
-    contents: prompt,
-  });
-  console.log("AI RESPONSE -> ", response.text);
+  while (true) {
+      const prompt = await rl.question("Enter your prompt: ");
+      if(prompt.toLowerCase() === "exit") {
+        console.log("Exiting...");
+        break;
+      }
+    
+      const response = await genAI.models.generateContent({ model: "gemini-2.5-flash" ,
+        contents: prompt,
+      });
+      console.log("AI RESPONSE -> ", response.text);
+  }
 }
 
 await mainAI();
