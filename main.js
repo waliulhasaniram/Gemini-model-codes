@@ -78,6 +78,4 @@ app.listen(3000, () => {
 //       console.log("AI RESPONSE -> ", response.text);
 //   }
 // }
-//AIzaSyAW8QOBaOtim5uSvRaHPgolS2Gw1Aw9Cgk
-
 // await mainAI();
